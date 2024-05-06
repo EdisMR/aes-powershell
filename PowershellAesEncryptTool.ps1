@@ -1,8 +1,8 @@
 Clear-Host
-
 Write-Host "##########################################"
 Write-Host "##########################################"
-Write-Host "##### Powershell Aes Encryption Tool #####"
+Write-Host "##### Powershell AES Encryption Tool #####"
+Write-Host "##### EDISMR - edisanthony@gmail.com #####"
 Write-Host "##########################################"
 Write-Host "##########################################"
 Write-Host ""
@@ -172,16 +172,32 @@ function Decrypt-String {
     return $decryptedString
 }
 
-
+Write-Host "Explanation of AES Encryption Algorithm:"
+Write-Host "16 bytes for AES-128 bits"
+Write-Host "24 bytes for AES-192 bits"
+Write-Host "32 bytes for AES-256 bits"
+Write-Host ""
+Write-Host ""
+Write-Host ""
 
 $Key = Read-Host "Insert the password (must be 16, 24 or 32 bytes)"
-$IV = Read-Host "Insert the IV (must be 16 bytes)"
-
+Write-Host ""
+$IV = Read-Host "Insert the IV (must be 16 bytes independent of the password length)"
+Write-Host ""
 $PlainText = Read-Host "Insert the string to be encrypted"
+Write-Host ""
 
 Clear-Host
+Write-Host "##########################################"
+Write-Host "##########################################"
+Write-Host "##### Powershell AES Encryption Tool #####"
+Write-Host "##### EDISMR - edisanthony@gmail.com #####"
+Write-Host "##########################################"
+Write-Host "##########################################"
 Write-Host ""
 Write-Host ""
+Write-Host ""
+
 
 try {
     $EncryptedString = Encrypt-String -PlainText $PlainText -Key ([System.Text.Encoding]::UTF8.GetBytes($Key)) -IV ([System.Text.Encoding]::UTF8.GetBytes($IV))
@@ -201,6 +217,7 @@ catch {
     Write-Host "Error while deciphering the string: $($_.Exception.Message)"
 }
 
+Write-Host ""
 Write-Host ""
 Write-Host ""
 
