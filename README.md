@@ -1,4 +1,4 @@
-# PowerShell AES Encryption Tool
+# PowerShell AES Encryption / Decryption Tool
 
 This PowerShell script provides functionalities to encrypt and decrypt text using the AES encryption algorithm.
 
@@ -6,7 +6,7 @@ This PowerShell script provides functionalities to encrypt and decrypt text usin
 
 1. Run the script in PowerShell.
 2. Follow the instructions to input the password (which must be 16, 24, or 32 bytes) and the IV (must be 16 bytes).
-3. Input the text you want to encrypt when prompted.
+3. Input the text you want to encrypt or decrypt when prompted.
 
 ## Available Functions
 
@@ -39,4 +39,4 @@ $decryptedText = Decrypt-String -EncryptedString $encryptedText -Key (1..16) -IV
 
 ## Author
 
-This script was developed by EdisMR (edisanthony@gmail.com).
+Both scripts where developed by EdisMR (edisanthony@gmail.com).
