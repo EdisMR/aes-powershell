@@ -39,4 +39,4 @@ $decryptedText = Decrypt-String -EncryptedString $encryptedText -Key (1..16) -IV
 
 ## Author
 
-Both scripts where developed by EdisMR (edisanthony@gmail.com).
+Both scripts were developed by EdisMR (edisanthony@gmail.com).
